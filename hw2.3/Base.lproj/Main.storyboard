@@ -41,7 +41,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="RLQ-zr-SyR"/>
-                                    <segue destination="PHL-S1-zFn" kind="modal" identifier="dvc" modalPresentationStyle="fullScreen" id="PoQ-DZ-6X3"/>
+                                    <segue destination="PHL-S1-zFn" kind="presentation" identifier="dvc" modalPresentationStyle="fullScreen" id="PoQ-DZ-6X3"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="lVE-19-sWS">
