@@ -80,6 +80,7 @@ extension ViewController: UITextFieldDelegate {
             passwordText.becomeFirstResponder()
         } else {
             logInButton()
+            performSegue(withIdentifier: "dvc", sender: nil)
         }
         return true
     }
