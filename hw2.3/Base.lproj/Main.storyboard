@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,19 +13,19 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hw2_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="YBI-Qz-CZ6">
-                                <rect key="frame" x="30" y="307.33333333333331" width="354" height="93"/>
+                                <rect key="frame" x="30" y="99.5" width="260" height="93"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="UUh-n4-yhT">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="nx2-xW-2Xg">
-                                        <rect key="frame" x="0.0" y="59" width="354" height="34"/>
+                                        <rect key="frame" x="0.0" y="59" width="260" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
@@ -33,7 +33,7 @@
                                 <color key="tintColor" red="0.26274511220000002" green="0.47450977560000002" blue="0.5411764979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddC-cC-VPV">
-                                <rect key="frame" x="170.66666666666666" y="430.33333333333331" width="73" height="35.666666666666686"/>
+                                <rect key="frame" x="123.5" y="222.5" width="73" height="35.5"/>
                                 <color key="tintColor" red="0.26274511220000002" green="0.47450977560000002" blue="0.5411764979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log In">
@@ -41,14 +41,14 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="RLQ-zr-SyR"/>
-                                    <segue destination="PHL-S1-zFn" kind="modal" modalPresentationStyle="pageSheet" id="PoQ-DZ-6X3"/>
+                                    <segue destination="PHL-S1-zFn" kind="modal" modalPresentationStyle="fullScreen" id="PoQ-DZ-6X3"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="lVE-19-sWS">
-                                <rect key="frame" x="20" y="470.33333333333331" width="374" height="29.666666666666686"/>
+                                <rect key="frame" x="20" y="262.5" width="280" height="45.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojL-u5-jEI">
-                                        <rect key="frame" x="0.0" y="0.0" width="158" height="29.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="118.5" height="45.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
@@ -58,7 +58,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDl-Sx-ykA">
-                                        <rect key="frame" x="219" y="0.0" width="155" height="29.666666666666668"/>
+                                        <rect key="frame" x="179.5" y="0.0" width="100.5" height="45.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
@@ -98,20 +98,20 @@
             <objects>
                 <viewController id="PHL-S1-zFn" customClass="WelcomeViewController" customModule="hw2_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xmz-Q5-PMi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bckgImage" translatesAutoresizingMaskIntoConstraints="NO" id="iWP-QE-WsP">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="-50" width="320" height="530"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVi-3K-vjd">
-                                <rect key="frame" x="175" y="30" width="64" height="30"/>
+                                <rect key="frame" x="128" y="30" width="64" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX3-3i-ClQ">
-                                <rect key="frame" x="163" y="742" width="88" height="36"/>
+                                <rect key="frame" x="116" y="414" width="88" height="36"/>
                                 <color key="tintColor" red="0.26274511220000002" green="0.47450977560000002" blue="0.5411764979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out">
@@ -134,7 +134,7 @@
                             <constraint firstItem="dbR-IC-WFM" firstAttribute="bottom" secondItem="dX3-3i-ClQ" secondAttribute="bottom" constant="30" id="H57-47-1jI"/>
                             <constraint firstItem="dX3-3i-ClQ" firstAttribute="centerX" secondItem="Xmz-Q5-PMi" secondAttribute="centerX" id="NFh-Ks-9Hg"/>
                             <constraint firstAttribute="bottom" secondItem="iWP-QE-WsP" secondAttribute="bottom" id="QMy-Y7-0Lf"/>
-                            <constraint firstItem="iWP-QE-WsP" firstAttribute="top" secondItem="dbR-IC-WFM" secondAttribute="top" id="UBw-ei-XjF"/>
+                            <constraint firstItem="iWP-QE-WsP" firstAttribute="top" secondItem="dbR-IC-WFM" secondAttribute="top" constant="-50" id="UBw-ei-XjF"/>
                             <constraint firstItem="iWP-QE-WsP" firstAttribute="trailing" secondItem="dbR-IC-WFM" secondAttribute="trailing" id="X69-S3-kmh"/>
                         </constraints>
                     </view>
@@ -150,7 +150,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bckgImage" width="375" height="812"/>
+        <image name="bckgImage" width="562.5" height="1218"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

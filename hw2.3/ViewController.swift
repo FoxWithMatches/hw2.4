@@ -56,10 +56,6 @@ class ViewController: UIViewController {
         userNameText.text = ""
         passwordText.text = ""
     }
-      
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
 }
 
 extension ViewController {
@@ -74,6 +70,11 @@ extension ViewController {
 }
 
 extension ViewController: UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userNameText {
             passwordText.becomeFirstResponder()
