@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     @IBOutlet var userNameText: UITextField!
     @IBOutlet var passwordText: UITextField!
     
+    private let user = User.getUserData()
+    
+// MARK: - Keyboard Delegate -
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameText.delegate = self
@@ -24,15 +28,10 @@ class ViewController: UIViewController {
         passwordText.enablesReturnKeyAutomatically = true
     }
 
+// MARK: - ABActions -
     @IBAction func logInButton() {
-        let name = "User"
-        guard name == userNameText.text else {
-            showAlert(title: "Invalid login or password", message: "Please, enter correct login and password")
-            return
-        }
         
-        let password = "Password"
-        guard password == passwordText.text else {
+        guard userNameText.text == user.login && passwordText.text == user.password else {
             showAlert(title: "Invalid login or password", message: "Please, enter correct login and password")
             return
         }
@@ -46,9 +45,21 @@ class ViewController: UIViewController {
         showAlert(title: "Oops!", message: "Your password is Password")
     }
     
+//MARK: - Navigation -
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let dvc = segue.destination as? WelcomeViewController else { return }
-        dvc.login = userNameText.text
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let welcomeViewController = viewController as? WelcomeViewController {
+                welcomeViewController.user = user
+            } else if let navigationViewController = viewController as? UINavigationController {
+                let aboutMeViewController = navigationViewController.topViewController as! AboutMeViewController
+                aboutMeViewController.user = user
+            }
+        }
+     
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -57,6 +68,8 @@ class ViewController: UIViewController {
         passwordText.text = ""
     }
 }
+
+// MARK: - Alert Controller
 
 extension ViewController {
     private func showAlert(title: String, message: String) {
