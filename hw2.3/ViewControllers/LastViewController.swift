@@ -11,6 +11,7 @@ class LastViewController: UIViewController {
 
     @IBOutlet var text: UILabel!
     
+    
     var user: User!
     
     override func viewDidLoad() {
