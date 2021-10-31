@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var userNameText: UITextField!
     @IBOutlet var passwordText: UITextField!
     
-    private let user = User.getUserData()
+    private let user = User.getUser()
     
 // MARK: - Keyboard Delegate -
     

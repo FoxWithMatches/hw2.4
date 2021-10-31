@@ -16,7 +16,7 @@ class MoreAboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        moreAboutMe.text = user.person.aboutOfPerson
+        moreAboutMe.text = user.person.hobby
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

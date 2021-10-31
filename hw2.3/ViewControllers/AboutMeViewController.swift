@@ -11,8 +11,7 @@ class AboutMeViewController: UIViewController {
 
     @IBOutlet var greeting: UILabel!
     @IBOutlet var aboutMe: UILabel!
-    @IBOutlet var hobby: UILabel!
-    @IBOutlet var exampleJob: UILabel!
+
     
     var user: User!
     
@@ -23,8 +22,6 @@ class AboutMeViewController: UIViewController {
         
         greeting.text = user.person.greetings
         aboutMe.text = user.person.aboutOfPerson
-        hobby.text = user.person.hobby
-        exampleJob.text = user.person.exampleJob
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
